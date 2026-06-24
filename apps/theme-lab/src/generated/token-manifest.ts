@@ -98,7 +98,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--accent-foreground",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
@@ -106,7 +107,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--accent-soft",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
@@ -159,7 +161,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--destructive",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
@@ -176,7 +179,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--good",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
@@ -184,7 +188,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--good-soft",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
@@ -210,7 +215,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--primary",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
@@ -218,7 +224,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--primary-foreground",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
@@ -226,7 +233,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--primary-soft",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
@@ -234,7 +242,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--warn",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
@@ -242,7 +251,8 @@ export const tokens: TokenDefinition[] = [
     "cssVar": "--warn-soft",
     "group": "semantic",
     "sourceFiles": [
-      "packages/themes/src/themes/bloom.css"
+      "packages/themes/src/themes/bloom.css",
+      "packages/themes/src/themes/slate.css"
     ]
   },
   {
