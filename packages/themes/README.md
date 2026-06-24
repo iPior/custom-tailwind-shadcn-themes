@@ -1,29 +1,6 @@
 # Custom Tailwind Shadcn Themes
 
-Shared Tailwind v4 and shadcn-compatible theme tokens for my apps.
-
-## Repo layout
-
-```txt
-packages/
-  themes/        # published theme package
-apps/
-  theme-lab/     # SPA playground for building and validating themes
-```
-
-Only `packages/themes` is intended to be consumed by other apps. The theme lab is a private workspace app, so its future dependencies do not bloat consuming applications.
-
-## Install from GitHub
-
-```sh
-pnpm add github:iPior/custom-tailwind-shadcn-themes#path:/packages/themes
-```
-
-For repeatable installs, prefer a tag once one exists:
-
-```sh
-pnpm add github:iPior/custom-tailwind-shadcn-themes#v0.1.0\&path:/packages/themes
-```
+Shared Tailwind v4 and shadcn-compatible theme tokens for Pior apps.
 
 ## Usage
 
@@ -69,17 +46,3 @@ export function ThemePicker() {
 ```
 
 Themes are applied with `data-theme` on the document root.
-
-## Development
-
-```sh
-pnpm install
-pnpm build
-pnpm typecheck
-```
-
-The root scripts target the published theme package. The private lab can be developed with:
-
-```sh
-pnpm dev:theme-lab
-```

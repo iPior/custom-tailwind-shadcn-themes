@@ -1,0 +1,14 @@
+{
+  "name": "@ipior/theme-lab",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "echo \"Theme lab SPA scaffold is ready for implementation.\"",
+    "build": "echo \"Theme lab SPA scaffold has no build yet.\"",
+    "typecheck": "echo \"Theme lab SPA scaffold has no typecheck yet.\""
+  },
+  "dependencies": {
+    "@ipior/custom-tailwind-shadcn-themes": "workspace:*"
+  }
+}

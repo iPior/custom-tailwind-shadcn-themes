@@ -6,7 +6,15 @@ settings:
 
 importers:
 
-  .:
+  .: {}
+
+  apps/theme-lab:
+    dependencies:
+      '@ipior/custom-tailwind-shadcn-themes':
+        specifier: workspace:*
+        version: link:../../packages/themes
+
+  packages/themes:
     dependencies:
       react:
         specifier: ^19.0.0
