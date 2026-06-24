@@ -4,17 +4,22 @@
   --ink-2: #4a5566;
   --ink-3: #8794a6;
   --accent: #3b6ea5;
-  --pistachio: #b6cfd6;
-  --peach: #d8dee9;
-  --lavender: #ccd3e3;
+  --accent-1: #b6cfd6;
+  --accent-2: #d8dee9;
+  --accent-3: #ccd3e3;
+
+  /* Backward-compatible palette aliases. Prefer accent-1/2/3 in new code. */
+  --pistachio: var(--accent-1);
+  --peach: var(--accent-2);
+  --lavender: var(--accent-3);
 
   --surface-rgb: 255, 255, 255;
   --frost-rgb: 255, 255, 255;
   --frost: #ffffff;
 
-  --blob-1: #cdd9e6;
-  --blob-2: #dfe5ee;
-  --blob-3: #d2dae8;
+  --blob-1: var(--accent-1);
+  --blob-2: var(--accent-2);
+  --blob-3: var(--accent-3);
   --blob-4: #e6ebf2;
   --blob-5: #cfe0e4;
   --blob-blend: multiply;

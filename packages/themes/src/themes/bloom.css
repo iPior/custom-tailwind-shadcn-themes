@@ -2,13 +2,18 @@
 [data-theme="bloom"] {
   /* Bloom palette - default warm light */
   --cream: #fdf9f0;
-  --pistachio: #cae0a8;
-  --peach: #f8d7c0;
-  --lavender: #dcd3f0;
+  --accent-1: #cae0a8;
+  --accent-2: #f8d7c0;
+  --accent-3: #dcd3f0;
   --ink: #2d2418;
   --ink-2: #574532;
   --ink-3: #9c8a73;
   --accent: #c5704a;
+
+  /* Backward-compatible palette aliases. Prefer accent-1/2/3 in new code. */
+  --pistachio: var(--accent-1);
+  --peach: var(--accent-2);
+  --lavender: var(--accent-3);
 
   /* Themeable surfaces - referenced by components as rgba(var(--...), alpha) */
   --surface-rgb: 255, 253, 247;
@@ -16,9 +21,9 @@
   --frost: #ffffff;
 
   /* Animated mesh blobs + atmosphere */
-  --blob-1: #cae0a8;
-  --blob-2: #f8d7c0;
-  --blob-3: #dcd3f0;
+  --blob-1: var(--accent-1);
+  --blob-2: var(--accent-2);
+  --blob-3: var(--accent-3);
   --blob-4: #f5e3a0;
   --blob-5: #c6e3d4;
   --blob-blend: multiply;

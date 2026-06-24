@@ -162,6 +162,7 @@ function TokenInventory({ values }: { values: TokenValueMap }) {
           atmosphere: [],
           shape: [],
           tailwind: [],
+          legacy: [],
           other: []
         }
       ),
@@ -306,7 +307,7 @@ function FinanceGallery() {
   return (
     <Section eyebrow="Product density" title="Finance preview">
       <div className="finance-grid">
-        <article className="metric-card tone-card-peach">
+        <article className="metric-card tone-card-1">
           <CircleDollarSign size={22} aria-hidden="true" />
           <span>Monthly spend</span>
           <strong>$4,820</strong>
@@ -315,7 +316,7 @@ function FinanceGallery() {
             8.4% below plan
           </small>
         </article>
-        <article className="metric-card tone-card-pistachio">
+        <article className="metric-card tone-card-2">
           <WalletCards size={22} aria-hidden="true" />
           <span>Cash flow</span>
           <strong>+$1,104</strong>
@@ -324,7 +325,7 @@ function FinanceGallery() {
             Strong month
           </small>
         </article>
-        <article className="metric-card tone-card-lavender">
+        <article className="metric-card tone-card-3">
           <ReceiptText size={22} aria-hidden="true" />
           <span>Needs review</span>
           <strong>12</strong>

@@ -14,6 +14,7 @@ const tokenGroupLabels = {
   atmosphere: 'Atmosphere',
   shape: 'Shape, shadow, type',
   tailwind: 'Tailwind aliases',
+  legacy: 'Legacy aliases',
   other: 'Other tokens'
 };
 
@@ -38,7 +39,8 @@ const semanticTokens = new Set([
   'warn-soft'
 ]);
 
-const coreTokens = new Set(['cream', 'pistachio', 'peach', 'lavender', 'ink', 'ink-2', 'ink-3', 'accent']);
+const coreTokens = new Set(['cream', 'accent-1', 'accent-2', 'accent-3', 'ink', 'ink-2', 'ink-3', 'accent']);
+const legacyTokens = new Set(['pistachio', 'peach', 'lavender', 'color-pistachio', 'color-peach', 'color-lavender']);
 
 async function listCssFiles(dir) {
   const entries = await readdir(dir, { withFileTypes: true });
@@ -55,6 +57,7 @@ async function listCssFiles(dir) {
 }
 
 function categorize(name) {
+  if (legacyTokens.has(name)) return 'legacy';
   if (name.startsWith('color-') || name.startsWith('animate-')) return 'tailwind';
   if (coreTokens.has(name)) return 'core';
   if (semanticTokens.has(name)) return 'semantic';

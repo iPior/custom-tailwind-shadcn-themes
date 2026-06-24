@@ -18,13 +18,18 @@
 [data-theme="bloom"] {
   /* Bloom palette - default warm light */
   --cream: #fdf9f0;
-  --pistachio: #cae0a8;
-  --peach: #f8d7c0;
-  --lavender: #dcd3f0;
+  --accent-1: #cae0a8;
+  --accent-2: #f8d7c0;
+  --accent-3: #dcd3f0;
   --ink: #2d2418;
   --ink-2: #574532;
   --ink-3: #9c8a73;
   --accent: #c5704a;
+
+  /* Backward-compatible palette aliases. Prefer accent-1/2/3 in new code. */
+  --pistachio: var(--accent-1);
+  --peach: var(--accent-2);
+  --lavender: var(--accent-3);
 
   /* Themeable surfaces - referenced by components as rgba(var(--...), alpha) */
   --surface-rgb: 255, 253, 247;
@@ -32,9 +37,9 @@
   --frost: #ffffff;
 
   /* Animated mesh blobs + atmosphere */
-  --blob-1: #cae0a8;
-  --blob-2: #f8d7c0;
-  --blob-3: #dcd3f0;
+  --blob-1: var(--accent-1);
+  --blob-2: var(--accent-2);
+  --blob-3: var(--accent-3);
   --blob-4: #f5e3a0;
   --blob-5: #c6e3d4;
   --blob-blend: multiply;
@@ -80,6 +85,11 @@
 @theme inline {
   /* Bloom flavor palette */
   --color-cream: var(--cream);
+  --color-accent-1: var(--accent-1);
+  --color-accent-2: var(--accent-2);
+  --color-accent-3: var(--accent-3);
+
+  /* Backward-compatible palette aliases. Prefer accent-1/2/3 in new code. */
   --color-pistachio: var(--pistachio);
   --color-peach: var(--peach);
   --color-lavender: var(--lavender);
@@ -141,17 +151,22 @@
   --ink-2: #4a5566;
   --ink-3: #8794a6;
   --accent: #3b6ea5;
-  --pistachio: #b6cfd6;
-  --peach: #d8dee9;
-  --lavender: #ccd3e3;
+  --accent-1: #b6cfd6;
+  --accent-2: #d8dee9;
+  --accent-3: #ccd3e3;
+
+  /* Backward-compatible palette aliases. Prefer accent-1/2/3 in new code. */
+  --pistachio: var(--accent-1);
+  --peach: var(--accent-2);
+  --lavender: var(--accent-3);
 
   --surface-rgb: 255, 255, 255;
   --frost-rgb: 255, 255, 255;
   --frost: #ffffff;
 
-  --blob-1: #cdd9e6;
-  --blob-2: #dfe5ee;
-  --blob-3: #d2dae8;
+  --blob-1: var(--accent-1);
+  --blob-2: var(--accent-2);
+  --blob-3: var(--accent-3);
   --blob-4: #e6ebf2;
   --blob-5: #cfe0e4;
   --blob-blend: multiply;
@@ -312,19 +327,22 @@
   box-shadow: var(--glass-shadow);
 }
 
+.tone-card-1,
 .tone-card-peach,
 .stat-card-peach {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--peach) 80%, transparent), color-mix(in srgb, var(--peach) 45%, transparent));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-2) 80%, transparent), color-mix(in srgb, var(--accent-2) 45%, transparent));
 }
 
+.tone-card-2,
 .tone-card-pistachio,
 .stat-card-pistachio {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--pistachio) 80%, transparent), color-mix(in srgb, var(--pistachio) 45%, transparent));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-1) 80%, transparent), color-mix(in srgb, var(--accent-1) 45%, transparent));
 }
 
+.tone-card-3,
 .tone-card-lavender,
 .stat-card-lavender {
-  background: linear-gradient(135deg, color-mix(in srgb, var(--lavender) 80%, transparent), color-mix(in srgb, var(--lavender) 45%, transparent));
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-3) 80%, transparent), color-mix(in srgb, var(--accent-3) 45%, transparent));
 }
 
 .theme-action-bg,
@@ -333,13 +351,13 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 10% 100%, color-mix(in srgb, var(--pistachio) 55%, transparent), transparent 40%),
-    radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--peach) 60%, transparent), transparent 50%);
+    radial-gradient(circle at 10% 100%, color-mix(in srgb, var(--accent-1) 55%, transparent), transparent 40%),
+    radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--accent-2) 60%, transparent), transparent 50%);
 }
 
 .theme-action-bg.all-caught,
 .action-bg.all-caught {
   background:
-    radial-gradient(circle at 10% 100%, color-mix(in srgb, var(--pistachio) 70%, transparent), transparent 50%),
-    radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--lavender) 60%, transparent), transparent 50%);
+    radial-gradient(circle at 10% 100%, color-mix(in srgb, var(--accent-1) 70%, transparent), transparent 50%),
+    radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--accent-3) 60%, transparent), transparent 50%);
 }
