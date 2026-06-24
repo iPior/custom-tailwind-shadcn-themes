@@ -1,0 +1,56 @@
+@theme inline {
+  /* Bloom flavor palette */
+  --color-cream: var(--cream);
+  --color-pistachio: var(--pistachio);
+  --color-peach: var(--peach);
+  --color-lavender: var(--lavender);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-accent: var(--accent);
+  --color-frost: var(--frost);
+
+  /* shadcn/Tailwind semantic colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-border-soft: var(--border-soft);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-destructive: var(--destructive);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-warn: var(--warn);
+  --color-warn-soft: var(--warn-soft);
+
+  --radius-sketch: var(--radius);
+  --radius-sketch-sm: var(--radius-sm);
+  --shadow-sketch: 2px 3px 0 0 var(--border);
+  --shadow-sketch-sm: 1.5px 2px 0 0 var(--border);
+  --shadow-sketch-xs: 1px 1.5px 0 0 var(--border);
+
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+
+  --animate-theme-drift: bloom-drift 22s ease-in-out infinite alternate;
+  --animate-theme-pulse: bloom-pulse 1.4s ease-in-out infinite;
+  --animate-theme-scrim-in: bloom-scrim-in 0.18s ease-out;
+  --animate-theme-toast-in: bloom-toast-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-theme-overlay-in: bloom-overlay-in 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-theme-overlay-item-in: bloom-overlay-item-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  /* Backward-compatible aliases for existing consumers. */
+  --animate-bloom-drift: var(--animate-theme-drift);
+  --animate-bloom-pulse: var(--animate-theme-pulse);
+  --animate-bloom-scrim-in: var(--animate-theme-scrim-in);
+  --animate-bloom-toast-in: var(--animate-theme-toast-in);
+  --animate-bloom-overlay-in: var(--animate-theme-overlay-in);
+  --animate-bloom-overlay-item-in: var(--animate-theme-overlay-item-in);
+}

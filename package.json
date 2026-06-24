@@ -5,8 +5,9 @@
   "type": "module",
   "packageManager": "pnpm@10.8.1",
   "scripts": {
-    "build": "pnpm --filter @ipior/custom-tailwind-shadcn-themes build",
-    "typecheck": "pnpm --filter @ipior/custom-tailwind-shadcn-themes typecheck",
+    "build": "pnpm --filter @ipior/custom-tailwind-shadcn-themes build && pnpm --filter @ipior/theme-lab build",
+    "typecheck": "pnpm --filter @ipior/custom-tailwind-shadcn-themes typecheck && pnpm --filter @ipior/theme-lab typecheck",
+    "generate:tokens": "pnpm --filter @ipior/theme-lab generate:tokens",
     "dev:theme-lab": "pnpm --filter @ipior/theme-lab dev"
   }
 }

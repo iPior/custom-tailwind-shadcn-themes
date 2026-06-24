@@ -1,10 +1,11 @@
+/* styles.css */
 /*
  * ============================================================================
  *  PIOR THEME SYSTEM
  *  Import this after Tailwind v4 in an app stylesheet:
  *
  *    @import "tailwindcss";
- *    @import "@finlens/theme/styles.css";
+ *    @import "@ipior/custom-tailwind-shadcn-themes/styles.css";
  *
  *  Themes are activated by setting <html data-theme="...">. Components should
  *  prefer semantic tokens like bg-card, text-foreground, border-border, and
@@ -12,6 +13,7 @@
  * ============================================================================
  */
 
+/* themes/bloom.css */
 :root,
 [data-theme="bloom"] {
   /* Bloom palette - default warm light */
@@ -74,6 +76,7 @@
   --font-heading: "Caveat", cursive;
 }
 
+/* tailwind-contract.css */
 @theme inline {
   /* Bloom flavor palette */
   --color-cream: var(--cream);
@@ -115,14 +118,23 @@
   --font-serif: "Fraunces", serif;
   --font-sans: "Outfit", system-ui, sans-serif;
 
-  --animate-bloom-drift: bloom-drift 22s ease-in-out infinite alternate;
-  --animate-bloom-pulse: bloom-pulse 1.4s ease-in-out infinite;
-  --animate-bloom-scrim-in: bloom-scrim-in 0.18s ease-out;
-  --animate-bloom-toast-in: bloom-toast-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
-  --animate-bloom-overlay-in: bloom-overlay-in 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-  --animate-bloom-overlay-item-in: bloom-overlay-item-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-theme-drift: bloom-drift 22s ease-in-out infinite alternate;
+  --animate-theme-pulse: bloom-pulse 1.4s ease-in-out infinite;
+  --animate-theme-scrim-in: bloom-scrim-in 0.18s ease-out;
+  --animate-theme-toast-in: bloom-toast-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-theme-overlay-in: bloom-overlay-in 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-theme-overlay-item-in: bloom-overlay-item-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+
+  /* Backward-compatible aliases for existing consumers. */
+  --animate-bloom-drift: var(--animate-theme-drift);
+  --animate-bloom-pulse: var(--animate-theme-pulse);
+  --animate-bloom-scrim-in: var(--animate-theme-scrim-in);
+  --animate-bloom-toast-in: var(--animate-theme-toast-in);
+  --animate-bloom-overlay-in: var(--animate-theme-overlay-in);
+  --animate-bloom-overlay-item-in: var(--animate-theme-overlay-item-in);
 }
 
+/* themes/slate.css */
 [data-theme="slate"] {
   --cream: #eef1f6;
   --ink: #1e2733;
@@ -159,8 +171,20 @@
   --muted-foreground: #6b7689;
   --border: #c2cad8;
   --border-soft: rgba(30, 39, 51, 0.2);
+
+  --primary: #3b6ea5;
+  --primary-foreground: #ffffff;
+  --primary-soft: #cdd9e6;
+  --accent-foreground: #1e2733;
+  --accent-soft: #d2dae8;
+  --destructive: #b0544e;
+  --good: #4a8370;
+  --good-soft: #d2e2dc;
+  --warn: #b08a3f;
+  --warn-soft: #e6ddc8;
 }
 
+/* helpers.css */
 @keyframes bloom-drift {
   0% { transform: translate(0, 0) scale(1); }
   100% { transform: translate(40px, -50px) scale(1.08); }
@@ -191,11 +215,13 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+.theme-overlay-anim,
 .bloom-overlay-anim {
   animation: bloom-overlay-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
   transform-origin: top center;
 }
 
+.theme-overlay-item-anim,
 .bloom-overlay-item-anim {
   animation: bloom-overlay-item-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
   opacity: 0;
@@ -207,14 +233,7 @@
   letter-spacing: 0.2px;
 }
 
-.scribble {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8'><path d='M2 5 Q 12 1 22 5 T 42 5 T 62 5 T 82 5 T 100 5' stroke='%23c96442' stroke-width='2' fill='none' stroke-linecap='round'/></svg>");
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: 100% 6px;
-  padding-bottom: 4px;
-}
-
+.theme-bar-fill,
 .bar-fill {
   background: repeating-linear-gradient(
     45deg,
@@ -223,6 +242,7 @@
   );
 }
 
+.theme-bar-fill-good,
 .bar-fill-good {
   background: repeating-linear-gradient(
     45deg,
@@ -231,12 +251,7 @@
   );
 }
 
-.thumb-hatch {
-  background:
-    linear-gradient(135deg, transparent 48%, var(--border-soft) 48% 52%, transparent 52%) 0 0 / 12px 12px,
-    var(--muted);
-}
-
+.theme-mesh,
 .bloom-mesh {
   position: fixed;
   inset: 0;
@@ -247,19 +262,21 @@
   overflow: hidden;
 }
 
+.theme-blob,
 .bloom-blob {
   position: absolute;
   border-radius: 9999px;
   mix-blend-mode: var(--blob-blend);
-  animation: var(--animate-bloom-drift);
+  animation: var(--animate-theme-drift);
 }
 
-.bloom-blob.b1 { width: 50vw; height: 50vw; top: -10vw; left: -10vw; background: var(--blob-1); }
-.bloom-blob.b2 { width: 45vw; height: 45vw; top: 10vw; right: -15vw; background: var(--blob-2); animation-direction: alternate-reverse; animation-duration: 28s; }
-.bloom-blob.b3 { width: 40vw; height: 40vw; bottom: -10vw; left: 15vw; background: var(--blob-3); animation-duration: 26s; }
-.bloom-blob.b4 { width: 30vw; height: 30vw; top: 40vw; left: 30vw; background: var(--blob-4); opacity: 0.7; animation-direction: alternate-reverse; animation-duration: 32s; }
-.bloom-blob.b5 { width: 28vw; height: 28vw; bottom: 5vw; right: 10vw; background: var(--blob-5); animation-duration: 30s; }
+.theme-blob.b1, .bloom-blob.b1 { width: 50vw; height: 50vw; top: -10vw; left: -10vw; background: var(--blob-1); }
+.theme-blob.b2, .bloom-blob.b2 { width: 45vw; height: 45vw; top: 10vw; right: -15vw; background: var(--blob-2); animation-direction: alternate-reverse; animation-duration: 28s; }
+.theme-blob.b3, .bloom-blob.b3 { width: 40vw; height: 40vw; bottom: -10vw; left: 15vw; background: var(--blob-3); animation-duration: 26s; }
+.theme-blob.b4, .bloom-blob.b4 { width: 30vw; height: 30vw; top: 40vw; left: 30vw; background: var(--blob-4); opacity: 0.7; animation-direction: alternate-reverse; animation-duration: 32s; }
+.theme-blob.b5, .bloom-blob.b5 { width: 28vw; height: 28vw; bottom: 5vw; right: 10vw; background: var(--blob-5); animation-duration: 30s; }
 
+.theme-grain,
 .bloom-grain {
   position: fixed;
   inset: 0;
@@ -268,34 +285,6 @@
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' /><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.18 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   opacity: var(--grain-opacity);
   mix-blend-mode: multiply;
-}
-
-.bloom-flower { position: relative; }
-
-.bloom-flower .petal {
-  position: absolute;
-  width: 41%;
-  height: 65%;
-  left: 29.5%;
-  top: 0;
-  border-radius: 50% 50% 50% 50% / 80% 80% 20% 20%;
-  transform-origin: 50% 100%;
-}
-
-.bloom-flower .p1 { transform: rotate(0deg); background: #cae0a8; }
-.bloom-flower .p2 { transform: rotate(120deg); background: #f8d7c0; }
-.bloom-flower .p3 { transform: rotate(240deg); background: #dcd3f0; }
-
-.bloom-flower .brand-core {
-  position: absolute;
-  width: 30%;
-  height: 30%;
-  left: 35%;
-  top: 35%;
-  background: var(--cream);
-  border: 1.5px solid var(--ink);
-  border-radius: 9999px;
-  z-index: 2;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -308,11 +297,13 @@
     scroll-behavior: auto !important;
   }
 
+  .theme-blob,
   .bloom-blob {
     animation: none;
   }
 }
 
+.theme-glass,
 .bloom-glass {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
@@ -321,18 +312,22 @@
   box-shadow: var(--glass-shadow);
 }
 
+.tone-card-peach,
 .stat-card-peach {
   background: linear-gradient(135deg, color-mix(in srgb, var(--peach) 80%, transparent), color-mix(in srgb, var(--peach) 45%, transparent));
 }
 
+.tone-card-pistachio,
 .stat-card-pistachio {
   background: linear-gradient(135deg, color-mix(in srgb, var(--pistachio) 80%, transparent), color-mix(in srgb, var(--pistachio) 45%, transparent));
 }
 
+.tone-card-lavender,
 .stat-card-lavender {
   background: linear-gradient(135deg, color-mix(in srgb, var(--lavender) 80%, transparent), color-mix(in srgb, var(--lavender) 45%, transparent));
 }
 
+.theme-action-bg,
 .action-bg {
   position: absolute;
   inset: 0;
@@ -342,6 +337,7 @@
     radial-gradient(circle at 90% 0%, color-mix(in srgb, var(--peach) 60%, transparent), transparent 50%);
 }
 
+.theme-action-bg.all-caught,
 .action-bg.all-caught {
   background:
     radial-gradient(circle at 10% 100%, color-mix(in srgb, var(--pistachio) 70%, transparent), transparent 50%),

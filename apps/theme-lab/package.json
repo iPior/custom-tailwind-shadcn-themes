@@ -4,11 +4,24 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "echo \"Theme lab SPA scaffold is ready for implementation.\"",
-    "build": "echo \"Theme lab SPA scaffold has no build yet.\"",
-    "typecheck": "echo \"Theme lab SPA scaffold has no typecheck yet.\""
+    "dev": "pnpm --filter @ipior/custom-tailwind-shadcn-themes build && pnpm generate:tokens && vite --host 0.0.0.0",
+    "build": "pnpm generate:tokens && tsc -b && vite build",
+    "typecheck": "pnpm generate:tokens && tsc --noEmit",
+    "generate:tokens": "node scripts/generate-token-manifest.mjs"
   },
   "dependencies": {
-    "@ipior/custom-tailwind-shadcn-themes": "workspace:*"
+    "@ipior/custom-tailwind-shadcn-themes": "workspace:*",
+    "lucide-react": "^1.16.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.8",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@vitejs/plugin-react": "^4.4.1",
+    "tailwindcss": "^4.0.8",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
   }
 }
