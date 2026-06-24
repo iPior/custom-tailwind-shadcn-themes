@@ -1,0 +1,34 @@
+{
+  "name": "@ipior/custom-tailwind-shadcn-themes",
+  "version": "0.1.0",
+  "description": "Shared Tailwind v4 and shadcn-compatible theme tokens for Pior apps.",
+  "type": "module",
+  "packageManager": "pnpm@10.8.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iPior/custom-tailwind-shadcn-themes.git"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && cp src/styles.css dist/styles.css",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.8",
+    "typescript": "^5.7.3"
+  }
+}
