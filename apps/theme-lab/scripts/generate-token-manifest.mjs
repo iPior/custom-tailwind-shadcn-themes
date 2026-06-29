@@ -13,6 +13,7 @@ const tokenGroupLabels = {
   surface: 'Surface and glass',
   atmosphere: 'Atmosphere',
   shape: 'Shape, shadow, type',
+  effects: 'Optional effect helpers',
   tailwind: 'Tailwind aliases',
   legacy: 'Legacy aliases',
   other: 'Other tokens'

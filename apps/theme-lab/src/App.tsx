@@ -161,6 +161,7 @@ function TokenInventory({ values }: { values: TokenValueMap }) {
           surface: [],
           atmosphere: [],
           shape: [],
+          effects: [],
           tailwind: [],
           legacy: [],
           other: []
