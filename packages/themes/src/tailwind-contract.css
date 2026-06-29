@@ -44,18 +44,10 @@
   --font-serif: "Fraunces", serif;
   --font-sans: "Outfit", system-ui, sans-serif;
 
-  --animate-theme-drift: bloom-drift 22s ease-in-out infinite alternate;
-  --animate-theme-pulse: bloom-pulse 1.4s ease-in-out infinite;
-  --animate-theme-scrim-in: bloom-scrim-in 0.18s ease-out;
-  --animate-theme-toast-in: bloom-toast-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
-  --animate-theme-overlay-in: bloom-overlay-in 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-  --animate-theme-overlay-item-in: bloom-overlay-item-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
-
-  /* Backward-compatible aliases for existing consumers. */
-  --animate-bloom-drift: var(--animate-theme-drift);
-  --animate-bloom-pulse: var(--animate-theme-pulse);
-  --animate-bloom-scrim-in: var(--animate-theme-scrim-in);
-  --animate-bloom-toast-in: var(--animate-theme-toast-in);
-  --animate-bloom-overlay-in: var(--animate-theme-overlay-in);
-  --animate-bloom-overlay-item-in: var(--animate-theme-overlay-item-in);
+  --animate-theme-drift: theme-drift 22s ease-in-out infinite alternate;
+  --animate-theme-pulse: theme-pulse 1.4s ease-in-out infinite;
+  --animate-theme-scrim-in: theme-scrim-in 0.18s ease-out;
+  --animate-theme-toast-in: theme-toast-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-theme-overlay-in: theme-overlay-in 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  --animate-theme-overlay-item-in: theme-overlay-item-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }

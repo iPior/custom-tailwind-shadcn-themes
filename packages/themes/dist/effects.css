@@ -7,45 +7,43 @@
  */
 
 /* helpers.css */
-@keyframes bloom-drift {
+@keyframes theme-drift {
   0% { transform: translate(0, 0) scale(1); }
   100% { transform: translate(40px, -50px) scale(1.08); }
 }
 
-@keyframes bloom-pulse {
+@keyframes theme-pulse {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 0.9; }
 }
 
-@keyframes bloom-scrim-in {
+@keyframes theme-scrim-in {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes bloom-toast-in {
+@keyframes theme-toast-in {
   from { opacity: 0; transform: translateY(8px) scale(0.98); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes bloom-overlay-in {
+@keyframes theme-overlay-in {
   from { opacity: 0; transform: scale(1.04) translateY(-6px); }
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-@keyframes bloom-overlay-item-in {
+@keyframes theme-overlay-item-in {
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.theme-overlay-anim,
-.bloom-overlay-anim {
-  animation: bloom-overlay-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+.theme-overlay-anim {
+  animation: theme-overlay-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
   transform-origin: top center;
 }
 
-.theme-overlay-item-anim,
-.bloom-overlay-item-anim {
-  animation: bloom-overlay-item-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+.theme-overlay-item-anim {
+  animation: theme-overlay-item-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
   opacity: 0;
 }
 
@@ -73,8 +71,7 @@
   );
 }
 
-.theme-mesh,
-.bloom-mesh {
+.theme-mesh {
   position: fixed;
   inset: 0;
   z-index: 0;
@@ -84,22 +81,20 @@
   overflow: hidden;
 }
 
-.theme-blob,
-.bloom-blob {
+.theme-blob {
   position: absolute;
   border-radius: 9999px;
   mix-blend-mode: var(--blob-blend);
   animation: var(--animate-theme-drift);
 }
 
-.theme-blob.b1, .bloom-blob.b1 { width: 50vw; height: 50vw; top: -10vw; left: -10vw; background: var(--blob-1); }
-.theme-blob.b2, .bloom-blob.b2 { width: 45vw; height: 45vw; top: 10vw; right: -15vw; background: var(--blob-2); animation-direction: alternate-reverse; animation-duration: 28s; }
-.theme-blob.b3, .bloom-blob.b3 { width: 40vw; height: 40vw; bottom: -10vw; left: 15vw; background: var(--blob-3); animation-duration: 26s; }
-.theme-blob.b4, .bloom-blob.b4 { width: 30vw; height: 30vw; top: 40vw; left: 30vw; background: var(--blob-4); opacity: 0.7; animation-direction: alternate-reverse; animation-duration: 32s; }
-.theme-blob.b5, .bloom-blob.b5 { width: 28vw; height: 28vw; bottom: 5vw; right: 10vw; background: var(--blob-5); animation-duration: 30s; }
+.theme-blob.b1 { width: 50vw; height: 50vw; top: -10vw; left: -10vw; background: var(--blob-1); }
+.theme-blob.b2 { width: 45vw; height: 45vw; top: 10vw; right: -15vw; background: var(--blob-2); animation-direction: alternate-reverse; animation-duration: 28s; }
+.theme-blob.b3 { width: 40vw; height: 40vw; bottom: -10vw; left: 15vw; background: var(--blob-3); animation-duration: 26s; }
+.theme-blob.b4 { width: 30vw; height: 30vw; top: 40vw; left: 30vw; background: var(--blob-4); opacity: 0.7; animation-direction: alternate-reverse; animation-duration: 32s; }
+.theme-blob.b5 { width: 28vw; height: 28vw; bottom: 5vw; right: 10vw; background: var(--blob-5); animation-duration: 30s; }
 
-.theme-grain,
-.bloom-grain {
+.theme-grain {
   position: fixed;
   inset: 0;
   z-index: 1;
@@ -119,14 +114,12 @@
     scroll-behavior: auto !important;
   }
 
-  .theme-blob,
-  .bloom-blob {
+  .theme-blob {
     animation: none;
   }
 }
 
-.theme-glass,
-.bloom-glass {
+.theme-glass {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(24px) saturate(140%);

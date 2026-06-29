@@ -474,54 +474,6 @@ export const tokens: TokenDefinition[] = [
     ]
   },
   {
-    "name": "animate-bloom-drift",
-    "cssVar": "--animate-bloom-drift",
-    "group": "tailwind",
-    "sourceFiles": [
-      "packages/themes/src/tailwind-contract.css"
-    ]
-  },
-  {
-    "name": "animate-bloom-overlay-in",
-    "cssVar": "--animate-bloom-overlay-in",
-    "group": "tailwind",
-    "sourceFiles": [
-      "packages/themes/src/tailwind-contract.css"
-    ]
-  },
-  {
-    "name": "animate-bloom-overlay-item-in",
-    "cssVar": "--animate-bloom-overlay-item-in",
-    "group": "tailwind",
-    "sourceFiles": [
-      "packages/themes/src/tailwind-contract.css"
-    ]
-  },
-  {
-    "name": "animate-bloom-pulse",
-    "cssVar": "--animate-bloom-pulse",
-    "group": "tailwind",
-    "sourceFiles": [
-      "packages/themes/src/tailwind-contract.css"
-    ]
-  },
-  {
-    "name": "animate-bloom-scrim-in",
-    "cssVar": "--animate-bloom-scrim-in",
-    "group": "tailwind",
-    "sourceFiles": [
-      "packages/themes/src/tailwind-contract.css"
-    ]
-  },
-  {
-    "name": "animate-bloom-toast-in",
-    "cssVar": "--animate-bloom-toast-in",
-    "group": "tailwind",
-    "sourceFiles": [
-      "packages/themes/src/tailwind-contract.css"
-    ]
-  },
-  {
     "name": "animate-theme-drift",
     "cssVar": "--animate-theme-drift",
     "group": "tailwind",
