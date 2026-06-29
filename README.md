@@ -50,6 +50,12 @@ Import the theme CSS after Tailwind in your app stylesheet:
 @import "@ipior/custom-tailwind-shadcn-themes/styles.css";
 ```
 
+Apps that want the shared effect helpers can opt in separately:
+
+```css
+@import "@ipior/custom-tailwind-shadcn-themes/effects.css";
+```
+
 Wrap your React app with the provider:
 
 ```tsx

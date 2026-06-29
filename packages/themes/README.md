@@ -11,6 +11,13 @@ Import the theme CSS after Tailwind in your app stylesheet:
 @import "@ipior/custom-tailwind-shadcn-themes/styles.css";
 ```
 
+Import the optional effect helpers only in apps that want shared glass, mesh,
+grain, motion, and accent-surface utility classes:
+
+```css
+@import "@ipior/custom-tailwind-shadcn-themes/effects.css";
+```
+
 Wrap your React app with the provider:
 
 ```tsx

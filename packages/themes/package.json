@@ -18,7 +18,8 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
     },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./dist/styles.css",
+    "./effects.css": "./dist/effects.css"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json && node scripts/build-styles.mjs",
